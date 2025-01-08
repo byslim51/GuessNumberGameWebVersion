@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Попытайтесь угадать число:</h1>
+<h3><span th:text="${gameDifficult}"></span></h3>
+<form th:action="@{/guessNumber/game/checkPlayerVote}" method="post">
+<label>
+    <input type="number" name="player_vote" id="player_vote" size="41px"> <br>
+</label>
+    <h3><span th:text="${result}"></span></h3>
+<input type="submit" value="Попытаться">
+</form>
+</body>
+</html>

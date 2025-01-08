@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+</head>
+<body>
+<h1>Укажите диапазон максимального загаданного числа: </h1>
+<form th:action="@{/guessNumber/}" method="get">
+<label for="range">Число (1 - 100):</label>
+    <input type="range" id="range" name="range" min="1" max="100" th:value="${value}" step="1">
+    <span id="rangeValue" th:text="${value}"></span>
+
+    <script>
+        const rangeInput = document.getElementById("range");
+        const rangeValue = document.getElementById("rangeValue");
+
+        // Устанавливаем начальное значение, чтобы сразу отображалось
+        rangeValue.textContent = rangeInput.value;
+
+        // Обновление значения при изменении ползунка
+        rangeInput.addEventListener("input", function() {
+            rangeValue.textContent = rangeInput.value;
+        });
+    </script>
+</script>
+<input type="submit" value="Подтвердить">
+</form>
+</body>
+</html>
