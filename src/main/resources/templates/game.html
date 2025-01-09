@@ -6,13 +6,14 @@
 </head>
 <body>
 <h1>Попытайтесь угадать число:</h1>
-<h3><span th:text="${gameDifficult}"></span></h3>
+<h3>Введите число от 1 до <span th:text="${gameDifficult}"></span></h3>
 <form th:action="@{/guessNumber/game/checkPlayerVote}" method="post">
 <label>
-    <input type="number" name="player_vote" id="player_vote" size="41px"> <br>
+    <input type="number" name="player_vote" id="player_vote" size="41px"><br>
 </label>
     <h3><span th:text="${result}"></span></h3>
-<input type="submit" value="Попытаться">
+    <input type="submit" value="Попытаться">
+    <a th:href="@{/guessNumber/}"><button type="submit" value="lose" name="result">Сдаться</button></a>
 </form>
 </body>
 </html>

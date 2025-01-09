@@ -8,7 +8,7 @@
 <h1>Укажите диапазон максимального загаданного числа: </h1>
 <form th:action="@{/guessNumber/}" method="get">
 <label for="range">Число (1 - 100):</label>
-    <input type="range" id="range" name="range" min="1" max="100" th:value="${value}" step="1">
+    <input type="range" id="range" name="range" min="2" max="100" th:value="${value}" step="1">
     <span id="rangeValue" th:text="${value}"></span>
 
     <script>
@@ -24,7 +24,8 @@
         });
     </script>
 </script>
-<input type="submit" value="Подтвердить">
+    <button type="submit" name="action" value="confirm">Подтвердить</button><br>
+    <button type="submit" name="action" value="cancel">Отмена</button>
 </form>
 </body>
 </html>

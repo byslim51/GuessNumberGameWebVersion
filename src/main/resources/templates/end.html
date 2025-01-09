@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Поздравляю с победой в игре! Вы попробовали угадать число <span th:text="${playerAttempt}"></span> раз</h1>
+<h1><span th:text="${result}"></span></h1>
 
 <a th:href="@{/guessNumber/}"><button>В главное меню</button></a>
 </body>
