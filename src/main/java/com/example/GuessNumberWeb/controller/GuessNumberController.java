@@ -105,6 +105,7 @@ public class GuessNumberController {
                 model.addAttribute("result", "Вы не угадали");
                 playerAttemptNumber++;
                 wereNumbers.add(playerVote);
+                model.addAttribute("numbers", wereNumbers);
                 model.addAttribute("gameDifficult", gameDifficult);
                 return "game"; // Продолжаем игру
             }

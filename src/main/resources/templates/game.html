@@ -7,6 +7,10 @@
 <body>
 <h1>Попытайтесь угадать число:</h1>
 <h3>Введите число от 1 до <span th:text="${gameDifficult}"></span></h3>
+<h3>Введенные ваши числа:</h3>
+<h3 th:each="num : ${numbers}" th:text="${num}"></h3>
+
+
 <form th:action="@{/guessNumber/game/checkPlayerVote}" method="post">
 <label>
     <input type="number" name="player_vote" id="player_vote" size="41px"><br>
