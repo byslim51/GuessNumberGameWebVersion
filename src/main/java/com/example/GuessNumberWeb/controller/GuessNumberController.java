@@ -116,7 +116,7 @@ public class GuessNumberController {
     }
 
     @GetMapping("/setGameDifficult")
-    public String setGameDifficult(Model model, HttpServletRequest request, HttpSession session) {
+    public String setGameDifficultPage(Model model, HttpServletRequest request, HttpSession session) {
 //       Сохранение значение сложности
         if (session.getAttribute("gameDifficult") != null) {
             model.addAttribute("value", session.getAttribute("gameDifficult"));
@@ -124,6 +124,11 @@ public class GuessNumberController {
             model.addAttribute("value", 5);
         }
         return "setGameDifficult"; // Страница настроек
+    }
+
+    @GetMapping("/howToPlay")
+    public String howToPlayPage(Model model, HttpServletRequest request, HttpSession session) {
+        return "howToPlay";
     }
 
     // Проверка корректности введённого числа

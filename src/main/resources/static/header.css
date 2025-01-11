@@ -1,0 +1,42 @@
+body {
+background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-x_xaJFp8ydNobMk_TNVdQ-Yu6jg9f5aKkQ&s');
+margin: 0;
+}
+
+.game-header {
+  display: flex; /* Flexbox для горизонтального расположения */
+  justify-content: space-between; /* Пространство между логотипом и кнопками */
+  align-items: center; /* Центрирование элементов по вертикали */
+  padding: 10px 20px; /* Внутренние отступы */
+  background-color: #333; /* Тёмный фон */
+  color: white; /* Цвет текста */
+  font-family: Arial, sans-serif; /* Шрифт */
+}
+
+.game-header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Контейнер для кнопок */
+.header-buttons {
+  display: flex; /* Расположение кнопок в одну строку */
+  gap: 10px; /* Отступ между кнопками  */
+}
+
+/* Стиль для кнопок */
+.menu-button {
+  background-color: #f0a500; /* Жёлтый фон кнопки */
+  color: #fff; /* Белый текст */
+  border: none; /* Убираем обводку */
+  border-radius: 5px; /* Скруглённые края */
+  padding: 10px 15px; /* Внутренние отступы */
+  font-size: 16px; /* Размер текста */
+  cursor: pointer; /* Указатель мыши при наведении */
+  transition: background-color 0.3s; /* Анимация при наведении */
+}
+
+/* Эффект при наведении на кнопку */
+.menu-button:hover {
+  background-color: #e08900; /* Более тёмный жёлтый цвет */
+}

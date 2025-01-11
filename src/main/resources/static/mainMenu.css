@@ -1,0 +1,47 @@
+#main_menu {
+width: 600px;
+height: 200px;
+position: relative;
+top: 50%;
+left: 40%;
+padding-bottom: 200px;
+margin-top: 300px;
+}
+
+#main_text {
+font-family: Arial, sans-serif;
+position: relative;
+top: 15px;
+left: -30px;
+}
+
+.action {
+height: 45px;
+width: 200px;
+margin-top: 20px;
+margin-left: 80px;
+text-align;
+border: none;
+border-radius: 5px;
+font-size: 17px;
+font-family: 'Arial', sans-serif;
+transition: background-color 0.3s;
+cursor: pointer;
+
+}
+
+#play_button {
+background-color: #f0a500;
+}
+
+#play_button:hover {
+background-color: #e08900;
+}
+
+#difficult_button {
+background-color: #88e7e7;
+}
+
+#difficult_button:hover {
+background-color: #7acfcf;
+}

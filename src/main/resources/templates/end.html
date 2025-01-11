@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/header.css"/>
 </head>
 <body>
-<h1><span th:text="${result}"></span></h1>
+<header class="game-header">
+    <div class="logo">Guess Number</div>
+    <div class="header-buttons">
+        <button class="menu-button">Главное меню</button>
+        <button class="menu-button">Как играть?</button>
+    </div>
+</header>
 
-<a th:href="@{/guessNumber/}"><button>В главное меню</button></a>
+<h1><span th:text="${result}"></span></h1>
+<a th:href="@{/guessNumber/}">
+    <button>В главное меню</button>
+</a>
+
 </body>
 </html>

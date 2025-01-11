@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Main Menu</title>
+    <link rel="stylesheet" href="/mainMenu.css"/>
+    <link rel="stylesheet" href="/header.css"/>
 </head>
 <body>
-<h1>Добро пожаловать в игру!</h1>
-<a th:href="@{/guessNumber/game}"><button class="num">Играть</button></a> <br>
-<a th:href="@{/guessNumber/setGameDifficult}"><button>Настройки сложности</button></a>
+<header class="game-header">
+    <div class="logo">Guess Number</div>
+    <div class="header-buttons">
+        <a th:href="@{/guessNumber/}">
+            <button class="menu-button">Главное меню</button>
+        </a>
+        <a th:href="@{/guessNumber/howToPlay}">
+            <button class="menu-button">Как играть?</button>
+        </a>
+    </div>
+</header>
+<div id="main_menu">
+    <h1 id="main_text">Добро пожаловать в игру!</h1>
+    <a th:href="@{/guessNumber/game}">
+        <button class="action" id="play_button">Играть</button>
+    </a> <br>
+    <a th:href="@{/guessNumber/setGameDifficult}">
+        <button class="action" id="difficult_button">Настройки сложности</button>
+    </a>
+</div>
+
 </body>
 </html>
