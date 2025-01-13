@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/style.css"/>
     <link rel="stylesheet" href="/header.css"/>
+    <link rel="stylesheet" href="/game.css"/>
 </head>
 <body>
 <header class="game-header">
@@ -15,10 +15,13 @@
     </div>
 </header>
 
-<h1>Попытайтесь угадать число:</h1>
-<h3>Введите число от 1 до <span th:text="${gameDifficult}"></span></h3>
-<h3>Введенные ваши числа:</h3>
-<h3 th:each="num : ${numbers}" th:text="${num}"></h3>
+<div id="main_menu">
+    <h1 id="main_text">Попытайтесь угадать число:</h1>
+    <h3>Введите число от 1 до <span th:text="${gameDifficult}"></span></h3>
+    <h3>Введенные ваши числа:</h3>
+    <h3 class="numbers-list">
+        <span th:each="num : ${numbers}" th:text="${num}"></span>
+    </h3>
 
 
 <form th:action="@{/guessNumber/game/checkPlayerVote}" method="post">
@@ -26,11 +29,11 @@
         <input type="number" name="player_vote" id="player_vote" size="41px"><br>
     </label>
     <h3><span th:text="${result}"></span></h3>
-    <input type="submit" value="Попытаться">
+    <input type="submit" class="action" id="check_number_button" value="Попытаться">
     <a th:href="@{/guessNumber/}">
-        <button type="submit" value="lose" name="result">Сдаться</button>
+        <button type="submit" class="action" id="cancel_button" value="lose" name="result">Сдаться</button>
     </a>
 </form>
-
+</div>
 </body>
 </html>

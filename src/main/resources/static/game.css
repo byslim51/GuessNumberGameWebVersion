@@ -1,0 +1,60 @@
+#main_menu {
+    margin: auto; /* Центрирование по горизонтали */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+    text-align: center; /* Центрирование текста внутри блока */
+    display: flex; /* Включаем Flexbox */
+    justify-content: center; /* Горизонтальное выравнивание */
+    align-items: center; /* Вертикальное выравнивание */
+    flex-direction: column; /* Элементы располагаются по вертикали */
+    margin-top: auto;
+}
+
+.action {
+border-radius: 5px;
+border: none;
+font-family: 'Arial', sans-serif;
+height: 50px;
+width: 150px;
+margin-top: 10px;
+font-size: 20px;
+transition: background-color 0.3s;
+cursor: pointer;
+}
+
+#check_number_button {
+background-color: #f0a500;
+}
+
+#cancel_button {
+background-color: #ed0707
+}
+
+#check_number_button:hover {
+background-color: #e08900;
+}
+
+#cancel_button:hover {
+background-color: #c70404;
+}
+
+#player_vote {
+height: 50px;
+border-radius: 5px;
+border: 0.1px solid #f0a500;
+font-size: 30px;
+}
+
+#main_text {
+    margin-bottom: 20px; /* Отступ между заголовком и остальным содержимым */
+}
+
+/* Стиль для массива чисел */
+#main_menu .numbers-list {
+    font-family: Arial, sans-serif; /* Шрифт для текста */
+}
+
+#main_menu .numbers-list span {
+    display: inline-block; /* Числа в строку */
+    margin-right: 10px; /* Промежуток между числами */
+}
+

@@ -20,7 +20,7 @@ height: 45px;
 width: 200px;
 margin-top: 20px;
 margin-left: 80px;
-text-align;
+text-align: center;
 border: none;
 border-radius: 5px;
 font-size: 17px;
@@ -34,12 +34,12 @@ cursor: pointer;
 background-color: #f0a500;
 }
 
-#play_button:hover {
-background-color: #e08900;
-}
-
 #difficult_button {
 background-color: #88e7e7;
+}
+
+#play_button:hover {
+background-color: #e08900;
 }
 
 #difficult_button:hover {

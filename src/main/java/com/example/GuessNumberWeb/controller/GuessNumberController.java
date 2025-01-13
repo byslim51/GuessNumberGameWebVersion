@@ -86,6 +86,8 @@ public class GuessNumberController {
             playerVote = Integer.parseInt(request.getParameter("player_vote"));
         } catch (NumberFormatException e) {
             model.addAttribute("result", textForProblem);
+            model.addAttribute("numbers", wereNumbers);
+            model.addAttribute("gameDifficult", gameDifficult);
             return "game";
         }
 
@@ -93,6 +95,8 @@ public class GuessNumberController {
         if (!wereNumbers.contains(playerVote)) {
             // Проверяем корректность выбора
             if (checkPlayerVote(playerVote, gameDifficult)) {
+                model.addAttribute("numbers", wereNumbers);
+                model.addAttribute("gameDifficult", gameDifficult);
                 model.addAttribute("result", textForProblem);
                 return "game";
             }
