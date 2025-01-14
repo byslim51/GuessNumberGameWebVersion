@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <title>Main Menu</title>
     <link rel="stylesheet" href="/header.css"/>
+    <link rel="stylesheet" href="/setGameDifficult.css"/>
+
 </head>
 <body>
 <header class="game-header">
     <div class="logo">Guess Number</div>
     <div class="header-buttons">
-        <button class="menu-button">Главное меню</button>
-        <button class="menu-button">Как играть?</button>
+        <a th:href="@{/guessNumber/}">
+            <button class="menu-button">Главное меню</button>
+        </a>
+        <a th:href="@{/guessNumber/howToPlay}">
+            <button class="menu-button">Как играть?</button>
+        </a>
     </div>
 </header>
 
+<div id="main_menu">
 <h1>Укажите диапазон максимального загаданного числа: </h1>
 <form th:action="@{/guessNumber/}" method="get">
-    <label for="range">Число (1 - 100):</label>
+    <label for="range">Число (1 - 100):</label> <span id="rangeValue" th:text="${value}"></span>
     <input type="range" id="range" name="range" min="2" max="100" th:value="${value}" step="1">
-    <span id="rangeValue" th:text="${value}"></span>
 
     <script>
         const rangeInput = document.getElementById("range");
@@ -33,10 +39,10 @@
         });
     </script>
     </script>
-    <button type="submit" name="action" value="confirm">Подтвердить</button>
-    <br>
-    <button type="submit" name="action" value="cancel">Отмена</button>
+    <button type="submit" name="action" class="action" id="cancel_button" value="cancel">Отмена</button>
+    <button type="submit" name="action" class="action" id="confirm_button" value="confirm">Подтвердить</button>
 </form>
+</div>
 
 </body>
 </html>

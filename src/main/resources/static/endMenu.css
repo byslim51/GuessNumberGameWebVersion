@@ -1,0 +1,27 @@
+#main_menu {
+margin: auto; /* Центрирование по горизонтали */
+font-family: 'Arial', sans-serif; /* Шрифт */
+text-align: center; /* Центрирование текста внутри блока */
+display: flex; /* Включаем Flexbox */
+justify-content: center; /* Горизонтальное выравнивание */
+align-items: center; /* Вертикальное выравнивание */
+flex-direction: column; /* Элементы располагаются по вертикали */
+margin-top: auto;
+}
+
+#home_button {
+border-radius: 5px;
+border: none;
+font-family: 'Arial', sans-serif;
+background-color: #f0a500;
+height: 50px;
+width: 200px;
+margin: auto;
+font-size: 20px;
+transition: background-color 0.3s;
+cursor: pointer;
+}
+
+#home_button:hover {
+background-color: #e08900;
+}

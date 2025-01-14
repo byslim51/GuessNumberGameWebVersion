@@ -73,7 +73,7 @@ public class GuessNumberController {
 //       Проверяем сдался ли игрок
         if ("lose".equals(lose)) {
             model.addAttribute("result", "Вы проиграли! Вы попробовали угадать " + playerAttemptNumber + " раз(а)");
-            return "end";
+            return "endMenu";
         }
 
         // Получаем сложность из сессии
@@ -104,7 +104,7 @@ public class GuessNumberController {
             // Проверка на угадывание числа
             if (playerVote == hiddenNumber) {
                 model.addAttribute("result", "Вы выиграли! Вы попробовали угадать " + playerAttemptNumber + " раз(а)");
-                return "end"; // Победа
+                return "endMenu"; // Победа
             } else {
                 model.addAttribute("result", "Вы не угадали");
                 playerAttemptNumber++;
